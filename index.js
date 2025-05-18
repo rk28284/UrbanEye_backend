@@ -27,7 +27,7 @@ app.use("/api",myComlaintRouter)
 
 
 app.listen(PORT, async () => {
-nsole.log("Backend Is Runing Civil Backend At Port: ",PORT); ;
+console.log("Backend Is Runing Civil Backend At Port: ",PORT); ;
   try {
     await connection;
 console.log("Connected to Sever At Port: ",PORT);
