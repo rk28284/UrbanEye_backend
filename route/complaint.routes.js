@@ -9,12 +9,12 @@ const authmiddleware = require('../middleware/auth.middleware');
 myComlaintRouter.get('/', getComplaint);
 
 // POST /api/mybooks/:bookId
-myComlaintRouter.post('/:Id', getSingleComplaint);
+myComlaintRouter.post('/add', addComplaint);
 
 // PATCH /api/mybooks/:bookId/status
 myComlaintRouter.patch('/:Id/status', updateComplaint);
 
 // PATCH /api/mybooks/:bookId/rating
-myComlaintRouter.patch('/add',addComplaint );
+myComlaintRouter.patch('/:Id',getSingleComplaint );
 
 module.exports = myComlaintRouter;
