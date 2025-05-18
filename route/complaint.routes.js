@@ -6,15 +6,15 @@ getComplaint,getSingleComplaint,updateComplaint,addComplaint
 const authmiddleware = require('../middleware/auth.middleware');
 
 // GET /api/mybooks
-myComlaintRouter.get('/', authmiddleware, getComplaint);
+myComlaintRouter.get('/', getComplaint);
 
 // POST /api/mybooks/:bookId
-myComlaintRouter.post('/:Id', authmiddleware, getSingleComplaint);
+myComlaintRouter.post('/:Id', getSingleComplaint);
 
 // PATCH /api/mybooks/:bookId/status
-myComlaintRouter.patch('/:Id/status', authmiddleware, updateComplaint);
+myComlaintRouter.patch('/:Id/status', updateComplaint);
 
 // PATCH /api/mybooks/:bookId/rating
-myComlaintRouter.patch('/add', authmiddleware,addComplaint );
+myComlaintRouter.patch('/add',addComplaint );
 
 module.exports = myComlaintRouter;
